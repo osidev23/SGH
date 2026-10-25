@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{# Página de inicio: una tarjeta por cada módulo que el usuario puede usar según su rol. #}
+
+{% block titulo %}Inicio{% endblock %}
+
+{% block contenido %}
+  <h1 class="h3 mb-1">Hola, {{ user }}</h1>
+  <p class="text-muted mb-4">Elegí un módulo para empezar.</p>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+    {% for modulo in user.modulos_permitidos %}
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="h5 card-title">{{ modulo.nombre }}</h2>
+            <p class="card-text">{{ modulo.descripcion }}</p>
+            <a href="{% url modulo.url %}" class="btn btn-primary stretched-link">Entrar</a>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <p>Tu usuario todavía no tiene un rol asignado. Pedile al Gerente que te lo asigne.</p>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,4 @@
+# Librerías que necesita el proyecto. Se instalan con: pip install -r requirements.txt
+Django==5.2.18
+mysqlclient==2.3.0
+python-dotenv==1.2.4

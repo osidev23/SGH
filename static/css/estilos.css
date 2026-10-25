@@ -1,0 +1,6 @@
+/* Estilos propios del SGH. Se cargan en templates/base.html después de Bootstrap,
+   así que lo que pongamos acá pisa los estilos de Bootstrap. */
+
+body {
+  background-color: #f8f9fa;
+}

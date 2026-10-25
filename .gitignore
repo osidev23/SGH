@@ -1,0 +1,21 @@
+# Archivos y carpetas que Git NO debe subir a GitHub.
+
+# Entorno virtual (cada uno crea el suyo con python -m venv venv)
+venv/
+
+# Archivos compilados de Python
+__pycache__/
+*.pyc
+
+# Configuración local con contraseñas
+.env
+
+# Archivos subidos por usuarios y estáticos recolectados
+media/
+staticfiles/
+
+# Configuración personal del editor
+.vscode/
+
+# Base SQLite (no la usamos, pero por si alguien la genera sin querer)
+db.sqlite3
